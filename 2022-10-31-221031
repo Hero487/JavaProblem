@@ -38,4 +38,37 @@ class Solution {
         }
         return answer;
     }
+} 
+
+//문자열 뒤집기
+class Solution {
+    public String solution(String my_string) {
+        String answer = "";
+        int a = my_string.length(); 
+        for(int i = a; i > 0; i--){
+            answer += my_string.substring(i-1,i);
+        }
+        return answer;
+    }
+}
+
+//짝수는 싫어요
+class Solution {
+    public int[] solution(int n) { 
+        int ss = 0;
+        if( n % 2 == 0){
+            ss = n/2;
+        }else{
+            ss = n/2 +1;
+        } 
+        int[] answer = new int[ss];
+        answer[0] = 1;
+        for(int i = 1 ; i  < ss ; i++){
+            answer[i] = answer[i-1]+ 2; 
+            }
+            
+          return answer;
+        }
+       
+   
 }
